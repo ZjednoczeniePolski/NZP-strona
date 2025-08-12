@@ -1,62 +1,66 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
-}
-
 header {
-    background-color: #d60000;
     display: flex;
-    align-items: center;
-    padding: 10px 20px;
     justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    padding: 15px 25px; /* większy pasek */
+    flex-wrap: nowrap;
 }
 
-.logo {
+header .logo-container {
     display: flex;
     align-items: center;
+    gap: 15px;
 }
 
-.logo img {
-    height: 60px;
-    margin-right: 10px;
+header img {
+    height: 60px; /* większe logo */
 }
 
-.logo-text {
-    font-size: 18px;
+header h1 {
+    margin: 0;
+    font-size: 24px;
     line-height: 1.2;
     color: white;
-    font-weight: bold;
+    text-align: center;
 }
 
-nav a {
-    color: white;
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+nav ul li {
+    white-space: nowrap;
+}
+
+nav ul li a {
     text-decoration: none;
-    padding: 15px 20px;
+    color: white;
+    padding: 8px 15px;
     transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-    background-color: #a80000;
+nav ul li a:hover {
+    background-color: darkred;
 }
 
-nav a.active {
-    background-color: #a80000;
-}
+/* Dla telefonów */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    text-align: center;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
+    nav ul li {
+        margin-top: 5px;
     }
 }
