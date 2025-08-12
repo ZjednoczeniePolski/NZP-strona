@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NZP - Strona Główna</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Narodowe Zjednoczenie Polski</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; text-align: center; }
+    header { background-color: #b71c1c; color: white; padding: 50px 20px; }
+    .logo { display: flex; align-items: center; justify-content: center; gap: 20px; }
+    .logo img { width: 100px; height: auto; }
+    .logo-text { font-size: 2rem; font-weight: bold; line-height: 1.2; }
+    nav { margin-top: 20px; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 1.2rem; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #ffd54f; }
+    section { padding: 40px 20px; max-width: 800px; margin: auto; }
+    section h1 { font-size: 2rem; color: #b71c1c; margin-bottom: 20px; }
+    section p { font-size: 1.1rem; line-height: 1.6; }
+  </style>
 </head>
 <body>
+
 <header>
-    <div class="logo">
-        <img src="logoNZP.png" alt="Logo NZP">
-        <div class="logo-text">
-            Narodowe<br>Zjednoczenie<br>Polski
-        </div>
+  <div class="logo">
+    <img src="logoNZP.png" alt="Logo NZP">
+    <div class="logo-text">
+      Narodowe<br>Zjednoczenie<br>Polski
     </div>
-    <nav>
-        <a href="index.html" class="active">O nas</a>
-        <a href="poglady.html">Poglądy</a>
-        <a href="kontakt.html">Kontakt</a>
-    </nav>
+  </div>
+  <nav>
+    <a href="opis.html">Opis Partii</a>
+    <a href="poglady.html">Poglądy</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
 </header>
-<main>
-    <h1>Witamy na stronie Narodowego Zjednoczenia Polski</h1>
-</main>
+
+<section>
+  <h1>Witamy w Narodowym Zjednoczeniu Polski</h1>
+  <p>
+    Nasza partia została założona 4 maja 2025 roku o godzinie 19:14.
+    Jesteśmy suwerennym ruchem politycznym, który stawia na dobro polskich rodzin,
+    rozwój gospodarki, wzmocnienie wojska oraz wspieranie krajowego handlu.
+  </p>
+</section>
+
 </body>
 </html>

@@ -1,35 +1,46 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: red;
-    padding: 20px 40px;
+/* Ogólny styl strony */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
+/* Pasek nagłówka */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    padding: 20px 0;
+}
+
+/* Logo + napis */
 .logo-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .logo-container img {
-    height: 70px;
+    height: 90px;
 }
 
 .logo-container .title {
     display: flex;
     flex-direction: column;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: bold;
     color: white;
+    text-align: center;
     line-height: 1.1;
 }
 
+/* Menu */
 nav ul {
     display: flex;
     list-style: none;
-    gap: 25px;
-    margin: 0;
+    gap: 30px;
+    margin: 20px 0 0 0;
     padding: 0;
 }
 
@@ -38,11 +49,11 @@ nav ul li a {
     color: white;
     text-decoration: none;
     padding: 8px 12px;
-    font-size: 18px;
+    font-size: 20px;
     transition: color 0.3s ease;
 }
 
-/* Efekt kwadracika */
+/* Animowany czerwony pasek pod linkiem */
 nav ul li a::after {
     content: "";
     position: absolute;
@@ -58,14 +69,21 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-/* Dla telefonów */
+/* Treść strony */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Dostosowanie do telefonów */
 @media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 15px;
+    }
+
+    .logo-container .title {
+        font-size: 28px;
     }
 }
