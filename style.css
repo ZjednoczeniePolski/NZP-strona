@@ -3,64 +3,69 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: red;
-    padding: 15px 25px; /* większy pasek */
-    flex-wrap: nowrap;
+    padding: 20px 40px;
 }
 
-header .logo-container {
+.logo-container {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
-header img {
-    height: 60px; /* większe logo */
+.logo-container img {
+    height: 70px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 24px;
-    line-height: 1.2;
+.logo-container .title {
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    font-weight: bold;
     color: white;
-    text-align: center;
+    line-height: 1.1;
 }
 
 nav ul {
     display: flex;
     list-style: none;
+    gap: 25px;
     margin: 0;
     padding: 0;
-    gap: 15px;
-}
-
-nav ul li {
-    white-space: nowrap;
 }
 
 nav ul li a {
-    text-decoration: none;
+    position: relative;
     color: white;
-    padding: 8px 15px;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+/* Efekt kwadracika */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 6px;
     background-color: darkred;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
 }
 
 /* Dla telefonów */
 @media (max-width: 600px) {
     header {
         flex-direction: column;
-        align-items: center;
+        gap: 15px;
     }
-
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
-    }
-
-    nav ul li {
-        margin-top: 5px;
     }
 }
